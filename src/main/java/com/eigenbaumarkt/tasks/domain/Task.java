@@ -3,6 +3,7 @@ package com.eigenbaumarkt.tasks.domain;
 import com.fasterxml.jackson.annotation.JsonFormat;
 import lombok.AllArgsConstructor;
 import lombok.Data;
+import lombok.NoArgsConstructor;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -11,6 +12,7 @@ import java.time.LocalDate;
 
 @Entity
 @Data
+@NoArgsConstructor
 @AllArgsConstructor
 public class Task {
 
