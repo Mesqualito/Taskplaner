@@ -37,6 +37,7 @@ export class TasksListComponent implements OnInit {
 
   onTaskChange(event, task) {
 
-      console.log('Task has changed');
+      // 'event.target.checked' => is the checkbox checked?
+      this.taskService.saveTask(task, event.target.checked).subscribe();
   }
 }
