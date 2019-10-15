@@ -1,5 +1,6 @@
 import {Component, OnInit} from '@angular/core';
 import {Task} from '../task.model';
+import {TaskService} from "../task.service";
 
 @Component({
   selector: 'app-tasks-list',
@@ -13,13 +14,20 @@ export class TasksListComponent implements OnInit {
     // but we use Typescript:
     tasks: Task[] = [];
 
-  constructor() { }
+  constructor(private taskService: TaskService) { }
 
   ngOnInit() {
 
-      this.tasks.push( new Task(1, "Aufgabe 1", true, "15/10/2019"));
-      this.tasks.push( new Task(2, "Aufgabe 2", true, "15/10/2019"));
-      this.tasks.push( new Task(3, "Aufgabe 3", true, "15/10/2019"));
+      return this.taskService.getTasks()
+      // we need to call the subscribe-Method:
+          .subscribe(
+              // get back an array: a list of tasks
+              (tasks: any[]) => {
+                  // set the value from this.tasks to the response from the taskService:
+                  this.tasks = tasks
+              },
+              (error) => console.log(error)
+          );
   }
 
   getDueDateLabel(task: Task){
