@@ -22,7 +22,7 @@ public class Task {
 
     private String name;
 
-    @JsonFormat(pattern = "MM/dd/yyyy")
+    @JsonFormat(pattern = "dd.MM.yyyy")
     private LocalDate dueDate;
 
     private Boolean completed;

@@ -1,10 +1,13 @@
 import {HttpClient} from "@angular/common/http"
 // needed every time if DI in Angular is used:
-import {Injectable} from "@angular/core";
+import {EventEmitter, Injectable} from "@angular/core";
 import {Task} from './task.model';
 
 @Injectable()
 export class TaskService {
+
+    // for updating the UI when new Tasks are added:
+    onTaskAdded = new EventEmitter<Task>();
 
     // dependency injection in Angular:
     constructor(private httpClient: HttpClient) {
@@ -22,6 +25,11 @@ export class TaskService {
         task.completed = checked;
 
         // take action on the controller method which is set up in Spring Boot:
+        return this.httpClient.post('/api/tasks/save', task);
+    }
+
+    addTask(task: Task) {
+
         return this.httpClient.post('/api/tasks/save', task);
     }
 }

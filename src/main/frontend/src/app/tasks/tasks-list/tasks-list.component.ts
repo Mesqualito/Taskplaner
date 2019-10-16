@@ -18,7 +18,7 @@ export class TasksListComponent implements OnInit {
 
   ngOnInit() {
 
-      return this.taskService.getTasks()
+      this.taskService.getTasks()
       // we need to call the subscribe-Method:
           .subscribe(
               // get back an array: a list of tasks
@@ -28,6 +28,10 @@ export class TasksListComponent implements OnInit {
               },
               (error) => console.log(error)
           );
+
+      this.taskService.onTaskAdded.subscribe(
+          (task: Task) => this.tasks.push(task)
+          )
   }
 
   getDueDateLabel(task: Task){
