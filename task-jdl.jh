@@ -1,0 +1,9 @@
+// https://github.com/springframeworkguru/tasksapp-mongodb
+// https://www.udemy.com/course/angular-4-java-developers/learn/lecture/8364748
+
+entity Task {
+	id String,
+    name String,
+    dueDate LocalDate,
+    completed Boolean
+}

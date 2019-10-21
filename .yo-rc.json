@@ -1,0 +1,39 @@
+{
+  "generator-jhipster": {
+    "promptValues": {
+      "packageName": "com.eigenbaumarkt"
+    },
+    "jhipsterVersion": "6.4.1",
+    "applicationType": "monolith",
+    "baseName": "TasksAppMongo",
+    "packageName": "com.eigenbaumarkt",
+    "packageFolder": "com/eigenbaumarkt",
+    "serverPort": "8080",
+    "authenticationType": "jwt",
+    "cacheProvider": "no",
+    "enableHibernateCache": false,
+    "websocket": false,
+    "databaseType": "mongodb",
+    "devDatabaseType": "mongodb",
+    "prodDatabaseType": "mongodb",
+    "searchEngine": false,
+    "messageBroker": false,
+    "serviceDiscoveryType": false,
+    "buildTool": "maven",
+    "enableSwaggerCodegen": false,
+    "jwtSecretKey": "OWFkY2ZjNzg3YTEwMDkwODYxZDE2M2U2ZmZlMDFjZDcwYjlmYjM3ZWRiZjNhNDBmZDNiM2NiZDg2YmNiNzc5NWJmZTVjMzU1NGE5ZjJlYTg0ZTAyZWZhYTM5MDAyMmY2ODU2YmJkYTYxMmYwMTE1MWFhMzEzZDY2OGU1NDFjYzk=",
+    "embeddableLaunchScript": false,
+    "useSass": true,
+    "clientPackageManager": "npm",
+    "clientFramework": "angularX",
+    "clientTheme": "none",
+    "clientThemeVariant": "",
+    "testFrameworks": [],
+    "jhiPrefix": "jhi",
+    "entitySuffix": "",
+    "dtoSuffix": "DTO",
+    "otherModules": [],
+    "enableTranslation": false,
+    "blueprints": []
+  }
+}
