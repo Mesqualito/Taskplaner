@@ -1,0 +1,6 @@
+BANG your history!
+
+Thanks to John Thompson, I learned to use:
+$ history
+$ !584
+(BANG history list entry # 584 - do this command again...)
